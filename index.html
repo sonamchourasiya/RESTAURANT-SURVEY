@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Satisfaction Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Satisfaction Survey</h1>
+        <p>Please rate our service based on your experience on your visit to our Restaurant.</p>
+        
+        <form id="survey-form">
+            <h2>Screener Questions</h2>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date-visit">Date of Visit:</label>
+            <input type="date" id="date-visit" name="date-visit" required>
+
+            <h2>Survey Questions</h2>
+            <label>Please rate our service:</label>
+            <div class="rating">
+                <input type="radio" id="service-up" name="service" value="up" required>
+                <label for="service-up">👍</label>
+                <input type="radio" id="service-down" name="service" value="down">
+                <label for="service-down">👎</label>
+            </div>
+
+            <div id="service-comment-up" class="comment-box hidden">
+                <label>Is there anything in particular about our Service that you would like to highlight?</label>
+                <textarea name="service-highlight"></textarea>
+            </div>
+
+            <div id="service-comment-down" class="comment-box hidden">
+                <label>Sorry to hear that you didn't like our Service. Any suggestions on what we can do to improve it?</label>
+                <textarea name="service-suggestions"></textarea>
+            </div>
+
+            <label>Please rate our Ambience:</label>
+            <div class="star-rating" id="ambience-rating">
+                <input type="radio" id="ambience-1" name="ambience" value="1" required>
+                <label for="ambience-1" class="star">★</label>
+                <input type="radio" id="ambience-2" name="ambience" value="2">
+                <label for="ambience-2" class="star">★</label>
+                <input type="radio" id="ambience-3" name="ambience" value="3">
+                <label for="ambience-3" class="star">★</label>
+                <input type="radio" id="ambience-4" name="ambience" value="4">
+                <label for="ambience-4" class="star">★</label>
+                <input type="radio" id="ambience-5" name="ambience" value="5">
+                <label for="ambience-5" class="star">★</label>
+            </div>
+
+            <div id="ambience-comment-up" class="comment-box hidden">
+                <label>Is there anything in particular about our Ambience that you would like to highlight?</label>
+                <textarea name="ambience-highlight"></textarea>
+            </div>
+
+            <div id="ambience-comment-down" class="comment-box hidden">
+                <label>Sorry to hear that you didn't like our restaurant's Ambience. Any suggestions on what we can do to improve it?</label>
+                <textarea name="ambience-suggestions"></textarea>
+            </div>
+
+            <label>Please rate our food:</label>
+            <div class="star-rating" id="food-rating">
+                <input type="radio" id="food-1" name="food" value="1" required>
+                <label for="food-1" class="star">★</label>
+                <input type="radio" id="food-2" name="food" value="2">
+                <label for="food-2" class="star">★</label>
+                <input type="radio" id="food-3" name="food" value="3">
+                <label for="food-3" class="star">★</label>
+                <input type="radio" id="food-4" name="food" value="4">
+                <label for="food-4" class="star">★</label>
+                <input type="radio" id="food-5" name="food" value="5">
+                <label for="food-5" class="star">★</label>
+            </div>
+
+            <div id="food-comment-up" class="comment-box hidden">
+                <label>Which dish(es) did you like the most?</label>
+                <textarea name="food-liked"></textarea>
+            </div>
+
+            <div id="food-comment-down" class="comment-box hidden">
+                <label>Sorry to hear that you didn't like our food. Which dish didn't you like?</label>
+                <textarea name="food-disliked"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
